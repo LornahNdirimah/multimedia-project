@@ -1,0 +1,97 @@
+/* Reset and global styles for accessibility */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f4;
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Responsive Container Design */
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 800px; /* Constraints size on large screens */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #1e4620; /* High contrast dark green */
+    margin-bottom: 20px;
+}
+
+/* Responsive Fluid Video Container */
+.video-wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+video {
+    width: 100%; /* Makes the video completely fluid and scale with screen width */
+    height: auto;
+    display: block;
+}
+
+.description {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #4a5568;
+    text-align: justify;
+}
+
+/* Accessible Interactive Button Design */
+.control-btn {
+    background-color: #2e7d32;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.control-btn:hover {
+    background-color: #1b5e20;
+}
+
+/* Crucial accessibility feature for keyboard navigating users */
+.control-btn:focus-visible {
+    outline: 3px solid #81c784;
+    outline-offset: 2px;
+}
+
+.control-btn:active {
+    transform: scale(0.98);
+}
+
+/* Media Query for smaller dynamic mobile Viewports */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+}
